@@ -20,4 +20,6 @@ while [ ! -f /ks/.initfinished ]; do
 done;
 echo " done"
 
+/ks/cron-app-black.sh &
+
 echo

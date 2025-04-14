@@ -32,6 +32,13 @@ Delete all Kyverno-related:
 kubectl delete ValidatingWebhookConfiguration XXXX
 ```{{exec}}
 
+Scale back `kyverno` Deployment
+```plain
+kubectl scale deployment kyverno -n kyverno --replicas=1
+```{{exec}}
+
+Wait a bit...
+
 Pods should be able to start now:
 ```plain
 kubectl get events -A

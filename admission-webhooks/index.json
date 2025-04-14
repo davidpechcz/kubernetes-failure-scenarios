@@ -22,7 +22,8 @@
     },
     "assets": {
       "host01": [
-        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"}
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"},
+        {"file": "cron-app-black.sh", "target": "/ks", "chmod": "+x"}
       ]
     }
   },
