@@ -10,6 +10,7 @@ touch /ks/.k8sfinished
 # allow pods to run on controlplane
 kubectl taint nodes controlplane node-role.kubernetes.io/control-plane:NoSchedule-
 
+kubectl create ns app-white
 kubectl run --image=nginx app-white -n app-white
 
 helm repo add kyverno https://kyverno.github.io/kyverno/
