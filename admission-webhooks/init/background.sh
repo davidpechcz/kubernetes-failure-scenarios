@@ -16,9 +16,9 @@ kubectl run --image=nginx app-white -n app-white
 helm repo add kyverno https://kyverno.github.io/kyverno/
 helm repo update
 helm install kyverno kyverno/kyverno -n kyverno \
- --set backgroundController.replicas=0 \
- --set cleanupController.replicas=0 \
- --set reportsController.replicas=0 \
+ --set backgroundController.enabled=false \
+ --set cleanupController.enabled=false \
+ --set reportsController.enabled=false \
  --create-namespace \
  --set features.autoUpdateWebhooks.enabled=false
 
