@@ -22,6 +22,11 @@ helm install kyverno kyverno/kyverno -n kyverno \
  --create-namespace \
  --set features.autoUpdateWebhooks.enabled=false
 
+# k9s
+wget https://github.com/derailed/k9s/releases/download/v0.50.3/k9s_linux_amd64.deb
+dpkg -i k9s_linux_amd64.deb
+rm k9s_linux_amd64.deb
+
 echo -n "Waiting to see webhooks"
 
 while [ $( kubectl get ValidatingWebhookConfiguration,MutatingWebhookConfiguration | wc -l ) -gt 5 ]; do

@@ -7,7 +7,7 @@ This app seems ok:
 kubectl get pod -n app-white
 ```{{exec}}
 
-This seems broken (it's being changed every 20s in the background):
+This seems broken (it's being executed every 20s in the background and output is written to terminal):
 ```plain
 kubectl get pod -n app-black
 ```{{exec}}
