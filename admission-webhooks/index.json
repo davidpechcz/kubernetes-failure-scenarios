@@ -1,0 +1,32 @@
+{
+  "title": "Broken cluster",
+  "description": "Let's break the cluster and see how it behaves. We will also discuss how to make it more resilient.",
+  "details": {
+    "steps": [
+      {
+        "title": "Solution",
+        "text": "step1/text.md"
+      },
+      {
+        "title": "Resiliency Discussion",
+        "text": "step2/text.md"
+      }
+    ],
+    "finish": {
+      "text": "finish/finish.md"
+    },
+    "intro": {
+      "text": "init/init.md",
+      "background": "init/background.sh",
+      "foreground": "init/foreground.sh"
+    },
+    "assets": {
+      "host01": [
+        {"file": "wait-background.sh", "target": "/ks", "chmod": "+x"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}
